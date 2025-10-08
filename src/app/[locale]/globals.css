@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+    --primary: #108A00;
+    --white: #F5F5F5;
+    --black: #212529;
+}
+
+@theme inline {
+    --color-primary: var(--primary);
+    --color-white: var(--white);
+    --color-black: var(--black);
+    --font-inter: var(--font-inter);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+    background: #FFF;
+    color: var(--black);
+    font-family: var(--font-inter);
+}
+
+@utility container {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
