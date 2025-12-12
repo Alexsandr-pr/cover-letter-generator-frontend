@@ -4,12 +4,14 @@
     --primary: #108A00;
     --white: #F5F5F5;
     --black: #212529;
+    --secondary: #2E4E73;
 }
 
 @theme inline {
     --color-primary: var(--primary);
     --color-white: var(--white);
     --color-black: var(--black);
+    --color-secondary: var(--secondary);
     --font-inter: var(--font-inter);
 }
 
@@ -27,7 +29,7 @@ body {
 }
 
 @utility container {
-    max-width: 1520px;
+    max-width: 1420px;
     margin: 0 auto;
     padding: 0 20px;
 }

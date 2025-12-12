@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 type Props = {
     href?: string;
+    type?: 'button' | 'submit' | 'reset';
     onClick?: () => void;
     children: React.ReactNode;
     variant?: 'primary' | 'secondary';
@@ -14,13 +15,14 @@ type Props = {
 
 const Button: React.FC<Props> = ({
     href,
+    type,
     onClick,
     children,
     variant = 'primary',
     className,
 }) => {
 
-    const baseClasses = 'font-inter hover:opacity-95 transition-opacity duration-300 hover:cursor-pointer flex items-center gap-2 text-base font-medium leading-normal tracking-[-0.36px] px-6 py-4 rounded-lg';
+    const baseClasses = 'font-inter max-w-fit hover:opacity-95 transition-opacity duration-300 hover:cursor-pointer flex items-center gap-2 text-base font-medium leading-normal tracking-[-0.36px] px-6 py-4 rounded-lg';
 
     const variantClasses = {
         primary: 'bg-primary text-white',
@@ -32,7 +34,7 @@ const Button: React.FC<Props> = ({
     const content = (
         <>
             {children}
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-6 h-5" />
         </>
     )
 
@@ -45,7 +47,7 @@ const Button: React.FC<Props> = ({
     }
 
     return (
-        <button className={classes} onClick={onClick}>
+        <button className={classes} onClick={onClick} type={type}>
             {content}
         </button>
     )

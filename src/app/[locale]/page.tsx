@@ -1,8 +1,16 @@
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Button from '@/components/ui/Button';
 import Text from '@/components/ui/Text';
 import Title from '@/components/ui/Title';
+import { LOGO_TEXT } from '@/constants/logo';
+import { Metadata } from 'next';
 import Image from 'next/image';
+
+
+export const metadata: Metadata = {
+    title: 'AI Cover Letter Generator — Write Winning Upwork Proposals in Seconds'
+}
 
 export default async function HomePage() {
 
@@ -17,37 +25,37 @@ export default async function HomePage() {
                                 Получай больше заказов на Upwork с умными Cover Letter
                             </Title>
                             <Text className='text-center lg:text-left text-white mb-4 md:mb-6 lg:mb-14 mx-auto lg:mx-0 max-w-[580px]'>
-                                Генерируй персонализированные письма, которые цепляют клиентов и выделяют тебя среди конкурентов. Быстро, просто и эффективно с UpCoverlyAI.
+                                Генерируй персонализированные письма, которые цепляют клиентов и выделяют тебя среди конкурентов. Быстро, просто и эффективно с {LOGO_TEXT}.
                             </Text>
-                            <Button variant="secondary" className='hidden lg:flex'>
+                            <Button href="/waitlist" variant="secondary" className='hidden lg:flex'>
                                 Start writing for free
                             </Button>
                         </div>
                         <div className="w-full sm:max-w-[460px] lg:max-w-[460px] lg:min-w-[460px] lg:h-[460px] xl:min-w-[549px] xl:h-[549px] bg-white rounded-lg overflow-hidden">
                             <Image className='w-full h-full object-cover' src="/assets/images/hero.png" alt="Cover Letter" width={549} height={549} />
                         </div>
-                        <Button variant="secondary" className='flex mt-8 lg:hidden'>
+                        <Button href="/waitlist" variant="secondary" className='flex mt-8 lg:hidden'>
                             Start writing for free
                         </Button>
                     </div>
                 </section>
                 <section className='pt-20 lg:pt-24 xl:pt-[140px] pb-10 md:pb-[50px]'>
                     <div className="container">
-                        <div className="flex flex-col lg:flex-row items-center lg:gap-10 justify-between">
-                            <div className="max-w-[692px]">
-                                <Title className='text-center lg:text-left text-black mb-4 md:mb-6 max-w-[580px]' variant="h2">
+                        <div className="flex flex-col lg:flex-row items-center lg:gap-30 justify-between">
+                            <div className="w-full lg:w-1/2">
+                                <Title className='text-center lg:text-left text-black mx-auto lg:mx-0 mb-4 md:mb-6 max-w-[580px]' variant="h2">
                                     Создавай письма, которые выделяются
                                 </Title>
                                 <Text className='text-center lg:text-left text-black mb-6 lg:mb-14 mx-auto lg:mx-0 max-w-[580px]'>
-                                    UpCoverlyAI помогает писать персонализированные cover letter, точно подстраиваясь под требования вакансии. Произведи впечатление на заказчиков и увеличь свои шансы получить проект.
+                                    {LOGO_TEXT} помогает писать персонализированные cover letter, точно подстраиваясь под требования вакансии. Произведи впечатление на заказчиков и увеличь свои шансы получить проект.
                                 </Text>
-                                <Button className='hidden lg:flex'>
+                                <Button href="/waitlist" className='hidden lg:flex'>
                                     Get Started
                                 </Button>
                             </div>
-                            <div className="max-w-[748px]">
+                            <div className="w-full lg:w-1/2">
                                 <Image
-                                    className='max-w-full h-full object-cover'
+                                    className='max-w-full  mx-auto lg:mx-0  h-full object-cover'
                                     src="/assets/images/create-cover-letters.png"
                                     alt="Create Cover Letters"
                                     width={748}
@@ -59,24 +67,24 @@ export default async function HomePage() {
                 </section>
                 <section className='pb-20 lg:pt-24 xl:pb-[140px] md:pt-[50px] '>
                     <div className="container">
-                        <div className="flex border-t border-primary/30 pt-14 md:pt-[50px] flex-col-reverse lg:flex-row items-center lg:gap-[100px]">
-                            <div className="max-w-[661px]">
+                        <div className="flex border-t border-primary/30 pt-14 md:pt-[50px] flex-col-reverse lg:flex-row items-center lg:gap-30">
+                            <div className="w-full lg:w-1/2">
                                 <Image
-                                    className='max-w-full h-full object-cover'
+                                    className='max-w-full  mx-auto lg:mx-0  h-full object-cover'
                                     src="/assets/images/work-smarter.png"
                                     alt="Work Smarter"
-                                    width={661}
-                                    height={661}
+                                    width={561}
+                                    height={561}
                                 />
                             </div>
-                            <div className="max-w-[719px]">
-                                <Title className='text-center lg:text-left text-black mb-4 md:mb-6 max-w-[580px]' variant="h2">
+                            <div className="w-full lg:w-1/2">
+                                <Title className='text-center  lg:text-left text-black mx-auto lg:mx-0 mb-4 md:mb-6 max-w-[580px]' variant="h2">
                                     Работай умнее, откликайся быстрее
                                 </Title>
-                                <Text className='text-center lg:text-left text-black mb-6 lg:mb-14 mx-auto lg:mx-0 max-w-[580px]'>
+                                <Text className='text-center lg:text-left text-black mb-6 lg:mb-14 mx-auto lg:mx-0 max-w-[748px]'>
                                     Хватит тратить время на однотипные письма. UpCoverlyAI автоматизирует отклики, чтобы ты мог сосредоточиться на поиске лучших заказов и получать больше проектов.
                                 </Text>
-                                <Button className='hidden lg:flex'>
+                                <Button href="/waitlist" className='hidden lg:flex'>
                                     Try it now
                                 </Button>
                             </div>
@@ -89,14 +97,15 @@ export default async function HomePage() {
                             Пиши где угодно и когда угодно
                         </Title>
                         <Text className='text-center text-white mb-6 lg:mb-14 mx-auto max-w-[645px]'>
-                            Используй UpCoverlyAI с любого устройства и создавай эффективные письма в любой момент. Будь продуктивным дома, в дороге или в любимом кафе.
+                            Используй {LOGO_TEXT} с любого устройства и создавай эффективные письма в любой момент. Будь продуктивным дома, в дороге или в любимом кафе.
                         </Text>
-                        <Button variant="secondary" className='mx-auto'>
+                        <Button href="/waitlist" variant="secondary" className='mx-auto'>
                             Попробовать бесплатно
                         </Button>
                     </div>
                 </section>
             </main>
+            <Footer/>
         </div>
     )
 }

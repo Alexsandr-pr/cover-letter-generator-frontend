@@ -1,10 +1,8 @@
 import React from 'react'
-import Logo from './ui/Logo'
-import Button from './ui/Button'
 import NavLink from './ui/NavLink'
 
-const Header = () => {
-
+const Footer = () => {
+    
     const links = [
         { href: '/', label: 'Home' },
         // { href: '/about', label: 'About' },
@@ -12,12 +10,11 @@ const Header = () => {
     ]
 
     return (
-        <header className='bg-primary w-full py-4 fixed top-0 left-0 right-0 z-50'>
-            <div className="container flex items-center justify-between">
-                <Logo />
-                <div className="md:flex items-center gap-16 hidden">
+        <footer className='bg-primary w-full'>
+            <div className="container">
+                <div className="flex py-8 border-t border-secondary items-center justify-between">
                     <nav>
-                        <ul className='flex items-center gap-8'>
+                        <ul className='flex items-center gap-14'>
                             {links.map((link) => (
                                 <li key={link.href}>
                                     <NavLink href={link.href}>
@@ -27,13 +24,10 @@ const Header = () => {
                             ))}
                         </ul>
                     </nav>
-                    <Button href="/waitlist" variant="secondary">
-                        Start writing for free
-                    </Button>
                 </div>
             </div>
-        </header>
+        </footer>
     )
 }
 
-export default Header
+export default Footer
